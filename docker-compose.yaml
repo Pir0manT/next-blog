@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+ next-blog-app:
+    container_name: next-blog-app
+    build:
+      context: ./next-blog
+      dockerfile: Dockerfile
+      args:
+        DATABASE_URL: ${DATABASE_URL}
+        NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
+        NEXTAUTH_URL: ${NEXTAUTH_URL}
+        FIREBASE_API_KEY: ${FIREBASE_API_KEY}
+        NEXT_PUBLIC_BASE_API_URL: ${NEXT_PUBLIC_BASE_API_URL}
+        GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+        GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+        GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+        GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET}
+    image: next-blog-app
+    restart: always
+    ports:
+      - 6680:3000
+    environment:
+      - TZ=Europe/Moscow
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /usr/share/zoneinfo/Europe/Moscow:/etc/localtime:ro
