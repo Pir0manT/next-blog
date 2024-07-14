@@ -15,7 +15,9 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
+
+
 
 const WritePage = () => {
   const { status } = useSession();
@@ -27,6 +29,9 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -98,6 +103,7 @@ const WritePage = () => {
   };
 
   return (
+
     <div className={styles.container}>
       <input
         type="text"
