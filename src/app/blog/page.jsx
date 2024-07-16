@@ -11,19 +11,19 @@ const BlogPage = ({ searchParams }) => {
       title = "Важное";
       break;
     case "fashion":
-      title = "Полезное";
+      title = "Ревм. отделение";
       break;
     case "food":
-      title = "Интересное";
+      title = "Врачи";
       break;
     case "travel":
-      title = "Познавательное";
+      title = "Администрация";
       break;
     case "culture":
-      title = "Свежее";
+      title = "Старшие медсестры";
       break;
     case "coding":
-      title = "Срочное";
+      title = "Гематология";
       break;
     default:
       title = "Все новости";

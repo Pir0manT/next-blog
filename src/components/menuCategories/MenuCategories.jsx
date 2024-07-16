@@ -15,19 +15,19 @@ const MenuCategories = () => {
         Важное
       </Link>
       <Link href="/blog?cat=fashion" className={`${styles.categoryItem} ${styles.fashion}`}>
-        Полезное
+          Ревм. отделение
       </Link>
       <Link href="/blog?cat=food" className={`${styles.categoryItem} ${styles.food}`}>
-        Интересное
+          Врачи
       </Link>
       <Link href="/blog?cat=travel" className={`${styles.categoryItem} ${styles.travel}`}>
-        Познавательное
+          Администрация
       </Link>
       <Link href="/blog?cat=culture" className={`${styles.categoryItem} ${styles.culture}`}>
-        Свежее
+          Старшие медсестры
       </Link>
       <Link href="/blog?cat=coding" className={`${styles.categoryItem} ${styles.coding}`}>
-        Срочное
+          Гематология
       </Link>
     </div>
   );
